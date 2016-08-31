@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Set the base href -->
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <!--base href="http://code.getcloudcherry.com/2016/cherry-dashboard-app/"-->
+    
+    <title>CloudCherry Sample App</title>    
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic" rel="stylesheet" type="text/css">
+    
+     <!-- Bootstrap 2-->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/ng2-material/dist/ng2-material.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    
+    <!-- Progress bar and loading bar for HTTP requests -->
+    <link href="node_modules/nprogress/nprogress.css" rel="stylesheet">
+    <script src="node_modules/nprogress/nprogress.js"></script>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+    <!-- Chart Libraries -->
+    <script src="node_modules/d3/d3.min.js"></script>
+    <link href="//cdn.rawgit.com/masayuki0812/c3/master/c3.min.css" rel="stylesheet" type="text/css">
+    <script src="//cdn.rawgit.com/masayuki0812/c3/master/c3.min.js"></script>
+    
+    <!-- Angular 2 Must-->
+    <!-- IE required polyfills, in this exact order -->
+    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+    <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>   
+
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script src="node_modules/angular2/bundles/router.dev.js"></script>
+    <script src="node_modules/angular2/bundles/http.dev.js"></script>
+    
+    <!-- 2. Configure SystemJS -->
+    <script>
+      System.config({
+        defaultJSExtensions: true,
+        packages: {        
+          app: {
+            format: 'register',
+            defaultExtension: 'js'
+          },
+          angular2: { defaultExtension: false },
+          rxjs: { defaultExtension: false },
+          'ng2-material': {
+            defaultExtension: 'js'
+          }
+        },
+        paths: {
+            "ng2-material/all":"node_modules/ng2-material/all",
+        }
+      });
+      System.import('app/main')
+            .then(null, console.error.bind(console));
+    </script>
+   
+  </head>
+  <!-- 3. Display the application -->
+  <body>
+      <angular-2-sample-app>
+      </angular-2-sample-app>
+  </body>
+</html>

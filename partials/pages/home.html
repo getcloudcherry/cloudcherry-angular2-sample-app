@@ -1,0 +1,17 @@
+<div>
+    <a [routerLink]="['Home']" href="#">Home</a>
+    <a [routerLink]="['NPS']">NPS View</a>
+    <div>
+        <div>
+            <h4>Home</h4>
+            <div class="row">
+                <div class="col-md-12">
+                    <div style="height: 300px;">
+                        <div style="height: 100%;" class="cc-per-day-response-count" cherryChart [chart]="chartObj" [type]="chartType">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
